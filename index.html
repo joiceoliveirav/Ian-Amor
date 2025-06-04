@@ -102,49 +102,52 @@
     }
 
     /* CORAÇÕES */
-    .coração {
-      position: fixed;
-      bottom: 0;
-      width: 20px;
-      height: 20px;
-      background: red;
-      transform: rotate(45deg);
-      animation: subir 4s linear forwards;
-      z-index: 1;
-      opacity: var(--opacidade);
-      left: var(--posX);
-      transform: translateY(0) scale(var(--escala));
-    }
+.coração {
+  position: fixed;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: subir 4s linear forwards;
+  z-index: 0;
+  opacity: var(--opacidade);
+  left: var(--posX);
+  transform: translateY(0) scale(var(--escala));
+  pointer-events: none;
+}
 
-    .coração::before,
-    .coração::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 50%;
-    }
+.coração::before,
+.coração::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
 
-    .coração::before {
-      top: -10px;
-      left: 0;
-    }
+.coração::before {
+  top: -10px;
+  left: 0;
+}
 
-    .coração::after {
-      left: -10px;
-      top: 0;
-    }
+.coração::after {
+  left: -10px;
+  top: 0;
+}
 
-    @keyframes subir {
-      0% {
-        transform: translateY(0) scale(var(--escala));
-      }
-      100% {
-        transform: translateY(-120vh) scale(var(--escala));
-        opacity: 0;
-      }
-    }
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(var(--escala));
+    opacity: var(--opacidade);
+  }
+  100% {
+    transform: translateY(-150vh) scale(var(--escala));
+    opacity: 0;
+  }
+}
+
   </style>
 </head>
 <body>
