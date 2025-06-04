@@ -106,48 +106,19 @@
   position: fixed;
   bottom: 0;
   width: 20px;
-  height: 20px;
+  height: 18px;
   background: red;
-  left: var(--posX);
-  opacity: var(--opacidade);
-  transform: translateY(0) scale(var(--escala)); /* só escala aqui, sem rotação */
+  transform: scale(var(--escala));
   animation: subir 4s linear forwards;
   z-index: 9999;
-  cursor: default;
+  opacity: var(--opacidade);
+  left: var(--posX);
+  clip-path: polygon(
+    50% 100%, 100% 60%, 80% 20%,
+    50% 40%, 20% 20%, 0% 60%
+  );
+  pointer-events: none;
 }
-
-.coração::before,
-.coração::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-}
-
-.coração::before {
-  top: -10px;
-  left: 0;
-}
-
-.coração::after {
-  top: 0;
-  left: 10px;
-}
-
-/* Animação permanece igual */
-@keyframes subir {
-  0% {
-    transform: translateY(0) scale(var(--escala));
-    opacity: var(--opacidade);
-  }
-  100% {
-    transform: translateY(-120vh) scale(var(--escala));
-    opacity: 0;
-  }
-}
-
 
  @keyframes subir {
   0% {
