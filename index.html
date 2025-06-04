@@ -105,18 +105,15 @@
 .coração {
   position: fixed;
   bottom: 0;
-  width: 20px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   background: red;
-  transform: scale(var(--escala));
+  transform: translateY(0) scale(var(--escala));
   animation: subir 4s linear forwards;
   z-index: 9999;
   opacity: var(--opacidade);
   left: var(--posX);
-  clip-path: polygon(
-    50% 100%, 100% 60%, 80% 20%,
-    50% 40%, 20% 20%, 0% 60%
-  );
+  clip-path: path('M12 21s-8-6-8-11.5S6.5 2 12 7.5 20 2 20 9.5 12 21 12 21z');
   pointer-events: none;
 }
 
