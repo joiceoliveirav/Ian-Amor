@@ -105,16 +105,35 @@
 .coração {
   position: fixed;
   bottom: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: red;
   transform: translateY(0) scale(var(--escala));
   animation: subir 4s linear forwards;
   z-index: 9999;
   opacity: var(--opacidade);
   left: var(--posX);
-  clip-path: path('M12 21s-8-6-8-11.5S6.5 2 12 7.5 20 2 20 9.5 12 21 12 21z');
-  pointer-events: none;
+  border-radius: 0;
+}
+
+.coração::before,
+.coração::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.coração::before {
+  top: -10px;
+  left: 0;
+}
+
+.coração::after {
+  top: 0;
+  left: -10px;
 }
 
  @keyframes subir {
