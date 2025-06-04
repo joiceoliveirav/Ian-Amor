@@ -108,13 +108,14 @@
   width: 20px;
   height: 20px;
   background: red;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(0) scale(var(--escala));
   animation: subir 4s linear forwards;
-  z-index: 0;
+  z-index: 9999;
   opacity: var(--opacidade);
   left: var(--posX);
-  transform: translateY(0) scale(var(--escala));
   pointer-events: none;
+}
+
 }
 
 .coração::before,
