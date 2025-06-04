@@ -106,15 +106,17 @@
   position: fixed;
   bottom: 0;
   width: 20px;
-  height: 20px;
+  height: 18px;
   background: red;
-  transform: rotate(45deg) translateY(0) scale(var(--escala));
+  transform: scale(var(--escala));
   animation: subir 4s linear forwards;
   z-index: 9999;
   opacity: var(--opacidade);
   left: var(--posX);
+  clip-path: polygon(50% 100%, 100% 60%, 80% 20%, 50% 40%, 20% 20%, 0% 60%);
   pointer-events: none;
 }
+
 
 .coração::before,
 .coração::after {
