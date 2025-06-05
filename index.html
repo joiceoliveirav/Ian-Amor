@@ -244,6 +244,61 @@ E o amor… é casa. Você é minha casa.
   }, 300);
 }
 
+<audio id="audio" src="sua-musica.mp3" loop></audio>
+
+<div id="player" onclick="toggleAudio()">
+  <span id="icone-musica">🔊</span> Música
+</div>
+
+<script>
+  const audio = document.getElementById('audio');
+  const icone = document.getElementById('icone-musica');
+
+  // Tenta tocar automaticamente (alguns navegadores exigem interação do usuário)
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      audio.play().catch(() => {
+        // Espera clique se autoplay for bloqueado
+      });
+    }, 500);
+  });
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      icone.textContent = '🔊';
+    } else {
+      audio.pause();
+      icone.textContent = '🔇';
+    }
+  }
+</script>
+
+<style>
+  #player {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #f48fb1;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #player:hover {
+    background: #ec407a;
+  }
+</style>
+
   </script>
 </body>
 </html>
