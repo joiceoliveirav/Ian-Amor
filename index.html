@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<!-- Música de fundo -->
-    <audio autoplay loop style="display:none;">>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -137,7 +131,13 @@ clip-path: path("M10 18 C2 11, 0 5, 5 3 C8 2, 10 5, 10 5 C10 5, 12 2, 15 3 C20 5
   </style>
 </head>
 <body>
-
+    
+<!-- Música de fundo -->
+<button onclick="document.getElementById('musica').play()">Tocar Música</button>
+<audio id="musica" loop style="display:none;">
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+    
   <!-- TELAS COM MENSAGENS -->
   <div class="tela">Oi, meu amor! ❤️<button class="botao-proximo">Próximo</button></div>
   <div class="tela">Eu fiz uma surpresa para você...<button class="botao-proximo">Próximo</button></div>
