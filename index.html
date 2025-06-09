@@ -133,10 +133,12 @@ clip-path: path("M10 18 C2 11, 0 5, 5 3 C8 2, 10 5, 10 5 C10 5, 12 2, 15 3 C20 5
 <body>
     
 <!-- Música de fundo -->
-<button onclick="document.getElementById('musica').play()">Tocar Música</button>
-<audio id="musica" loop style="display:none;">
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
+<button id="botao-musica" style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; padding: 0.5rem 1rem; border: none; border-radius: 8px; background: #f48fb1; color: white; cursor: pointer;">🎵 Música</button>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
     
   <!-- TELAS COM MENSAGENS -->
   <div class="tela">Oi, meu amor! ❤️<button class="botao-proximo">Próximo</button></div>
@@ -197,6 +199,10 @@ E o amor… é casa. Você é minha casa.
         if (i + 1 === telas.length - 1) {
           iniciarContador();
           iniciarCoracoes();
+           document.getElementById('musica').play().catch(() => {
+    // Caso o navegador bloqueie a reprodução automática
+    console.log("Autoplay bloqueado. Clique em algum lugar para iniciar a música.");
+             });
         }
       });
     });
