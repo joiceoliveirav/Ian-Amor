@@ -44,46 +44,21 @@
       opacity: 1;
     }
 
-<!-- Botão -->
-<button class="botao-proximo">Próximo</button>
-
-<!-- Áudio (não visível, mas necessário para carregar o arquivo) -->
-<audio id="musica-fundo" src="musica.mp3" loop></audio>
-
-<style>
   .botao-proximo {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    background: #f48fb1;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
-  }
-
-  .botao-proximo:hover {
-    background: #ec407a;
-  }
-</style>
-
-<script>
-  let musicaIniciada = false;
-
-  document.querySelector('.botao-proximo').addEventListener('click', () => {
-    if (!musicaIniciada) {
-      const audio = document.getElementById('musica-fundo');
-      audio.play();
-      musicaIniciada = true;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: #f48fb1;
+      color: white;
+      border: none;Add commentMore actions
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
     }
-
-    // Aqui você pode colocar o que quiser que aconteça ao clicar no botão
-    console.log("Botão 'Próximo' clicado!");
-  });
-</script>
-
+ .botao-proximo:hover {
+      background: #ec407a;
+ }
 
     /* ÚLTIMA TELA COM ROLAGEM */
     .tela.ultima {
