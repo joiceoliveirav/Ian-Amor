@@ -52,14 +52,14 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      margin-top: 2rem;
+      margin-top: 2rem;Add commentMore actions
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
 
-    .botao-proximo:hover {
+       .botao-proximo:hover {
       background: #ec407a;
-    }
+       }
 
     /* ÚLTIMA TELA COM ROLAGEM */
     .tela.ultima {
@@ -168,7 +168,7 @@ Com você, o mundo é mais bonito.
 E o amor… é casa. Você é minha casa.
     </div>
   </div>
- 
+
   <script>
     const telas = document.querySelectorAll('.tela');
     const botoes = document.querySelectorAll('.botao-proximo');
@@ -219,7 +219,7 @@ E o amor… é casa. Você é minha casa.
         if (meses < 0) { meses += 12; anos--; }
 
         contador.innerText =
-          Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.;
+          `Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
       }
 
       atualizar();
