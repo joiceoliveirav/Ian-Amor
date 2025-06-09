@@ -44,21 +44,22 @@
       opacity: 1;
     }
 
-  .botao-proximo {
+    .botao-proximo {
       padding: 1rem 2rem;
       font-size: 1.1rem;
       background: #f48fb1;
       color: white;
-      border: none;Add commentMore actions
+      border: none;
       border-radius: 30px;
       cursor: pointer;
       margin-top: 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
- .botao-proximo:hover {
+
+    .botao-proximo:hover {
       background: #ec407a;
- }
+    }
 
     /* ÚLTIMA TELA COM ROLAGEM */
     .tela.ultima {
@@ -218,7 +219,7 @@ E o amor… é casa. Você é minha casa.
         if (meses < 0) { meses += 12; anos--; }
 
         contador.innerText =
-          `Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
+          Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.;
       }
 
       atualizar();
